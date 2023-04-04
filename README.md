@@ -1,8 +1,23 @@
 # CulturePlay Learning and Quiz Program
-This program helps in learning about selected 15 African cultures. The user have the option to select from any of the listed ancient cultures.
-The program is run on a terminal 
-The program works by prompting you to enter the name of an African culture and it returns information about that culture.
-It has various options of cultures you can select from.
-It allows users to take quizzes just on the cultures they learned about.
-The program outputs the correct question when the user is wrong.
-The program grades the user based on the quizzes taken.
+CulturePlay Learning and Quiz Program
+Welcome to the CulturePlay Learning and Quiz Program! This program is designed to help you learn about different cultures of Africa and test your knowledge with a quiz. Whether you're interested in learning about the rich folklore of the Yoruba culture, the distinctive dress of the Maasai people, or the traditional music of the Berber people, this program has you covered.
+
+Purpose
+The purpose of this program is to provide an engaging and educational way to learn about different cultures of Africa. By selecting a culture to learn about and taking a quiz on that culture, you can gain a deeper understanding and appreciation of the diverse cultural heritage of the continent.
+
+How to Play
+To play the CulturePlay Learning and Quiz Program, simply follow these steps:
+
+Run the program by opening the file "pld_coding_session.py" in a Python environment.
+You will be prompted to select a culture to learn about. Choose a culture from the list of available options and enter the corresponding number.
+Once you have learned about a culture, you will be given the option to learn about another culture or move on to the quiz.
+If you choose to take the quiz, you will be asked questions about the culture(s) you have learned about. Enter your answer and find out if you are correct!
+After completing the quiz, you will receive your score and a list of the cultures you have learned about.
+Features
+The CulturePlay Learning and Quiz Program includes the following features:
+
+Information on different cultures of Africa, including their history, customs, and traditions.
+A quiz to test your knowledge of the cultures you have learned about.
+The ability to learn about multiple cultures in a single session.
+User-friendly interface with clear instructions and prompts.
+We hope you enjoy using the CulturePlay Learning and Quiz Program to learn about the diverse cultures of Africa!
