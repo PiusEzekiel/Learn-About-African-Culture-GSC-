@@ -1,101 +1,161 @@
-countries_culture = ["Zulu culture of South Africa",
-                     "Maasai culture of Kenya and Tanzania",
-                     "Berber culture of North Africa",
-                     "Yoruba culture of Nigeria",
-                     "Kikuyu culture of Kenya",
-                     "Swahili culture of East Africa",
-                     "Tuareg culture of the Sahara Desert",
-                     "Igbo culture of Nigeria",
-                     "Amhara culture of Ethiopia",
-                     "Hausa culture of Nigeria and Niger",
-                     "San culture of Southern Africa",
-                     "Ndebele culture of Zimbabwe and South Africa",
-                     "Ndebele culture of Zimbabwe and South Africa",
-                     "Wolof culture of Senegal",
-                     "Ashanti culture of Ghana",
-                     "Fula culture of West and Central Africa",
-                     ]
-
-valid_choices = []
-for i in range(1, len(countries_culture) + 1):
-    valid_choices.append(str(i))
-print("These are the options you have: {}".format(valid_choices))
-current_choice = "-"
-
-while current_choice != '0':
-    if current_choice == '1':
-        print("You're reading about option {}".format(current_choice))
-        print("Zulu culture of South Africa: The Zulu people have a strong warrior tradition and are known"
-              " for their dance, music, and art. They have a hierarchical social structure, "
-              "with the king at the top.")
-    elif current_choice == '2':
-        print("You're reading about option {}".format(current_choice))
-        print("Maasai culture of Kenya and Tanzania: The Maasai people are known for their distinctive dress,"
-              " which includes brightly colored shukas (cloth wraps) and beaded jewelry. "
-              "They are semi-nomadic herders and have a strong connection to their cattle.")
-    elif current_choice == '3':
-        print("You're reading about option {}".format(current_choice))
-        print("Berber culture of North Africa: Berber culture is a diverse set of cultures found across North Africa, "
-              "including in Morocco, Algeria, Tunisia, and Libya. The Berber people have a rich history and are known "
-              "for their music, dance, and art.")
-    elif current_choice == '4':
-        print("You're reading about option {}".format(current_choice))
-        print("Yoruba culture of Nigeria: The Yoruba people have a rich cultural heritage, including a unique religion,"
-              " art, music, and dance. They have a strong emphasis on family and community.")
-    elif current_choice == '5':
-        print("You're reading about option {}".format(current_choice))
-        print("Kikuyu culture of Kenya: The Kikuyu people are the largest ethnic group in Kenya and have a rich"
-              " cultural heritage. They are known for their music, dance, and storytelling traditions.")
-    elif current_choice == '6':
-        print("You're reading about option {}".format(current_choice))
-        print("Swahili culture of East Africa: The Swahili people are a diverse group found along the"
-              " East African coast, including in Kenya, Tanzania, and Mozambique. They have a unique blend of African,"
-              " Arab, and Indian influences and are known for their language, music, and cuisine.")
-    elif current_choice == '7':
-        print("You're reading about option {}".format(current_choice))
-        print("Tuareg culture of the Sahara Desert: The Tuareg people are a nomadic group found in the Sahara Desert."
-              " They are known for their distinctive blue clothing and jewelry, and have a rich tradition of"
-              " music and poetry.")
-    elif current_choice == '8':
-        print("You're reading about option {}".format(current_choice))
-        print("Igbo culture of Nigeria: The Igbo people have a rich cultural heritage, including a unique religion,"
-              " art, music, and dance. They have a strong emphasis on community and are known for"
-              " their entrepreneurial spirit.")
-    elif current_choice == '9':
-        print("You're reading about option {}".format(current_choice))
-        print("Amhara culture of Ethiopia: The Amhara people are one of the largest ethnic groups in Ethiopia and"
-              " have a rich cultural heritage, including a unique language, music, and dance.")
-    elif current_choice == '10':
-        print("You're reading about option {}".format(current_choice))
-        print("Hausa culture of Nigeria and Niger: The Hausa people are a large ethnic group found in"
-              " Nigeria and Niger. They have a rich cultural heritage, including a unique language, music, and dance.")
-    elif current_choice == '12':
-        print("You're reading about option {}".format(current_choice))
-        print("San culture of Southern Africa: The San people are one of the oldest ethnic groups in"
-              " Southern Africa and have a unique cultural heritage, including a distinctive"
-              " language, art, music, and dance.")
-    elif current_choice == '13':
-        print("You're reading about option {}".format(current_choice))
-        print("Ndebele culture of Zimbabwe and South Africa: The Ndebele people are known for their distinctive"
-              " art and architecture, including brightly painted houses and bead-work.")
-    elif current_choice == '14':
-        print("You're reading about option {}".format(current_choice))
-        print("Wolof culture of Senegal: The Wolof people are one of the largest ethnic groups in Senegal and"
-              " have a rich cultural heritage, including a unique language, music, and dance.")
-    elif current_choice == '15':
-        print("You're reading about option {}".format(current_choice))
-        print("Ashanti culture of Ghana: The Ashanti people are known for their rich cultural traditions,"
-              " including their use of kente cloth, traditional dance and music, and elaborate"
-              " funerals to honor their ancestors.")
-    elif current_choice == '16':
-        print("You're reading about option {}".format(current_choice))
-        print("Fula culture of West and Central Africa: The Fula people are a large ethnic group found across"
-              " West and Central Africa. They have a rich cultural heritage, including a unique"
-              " language, music, and dance.")
+def learn_about_cultures(cultures, learned_cultures):
+    print("Select a culture to learn about by writing the name:")
+    # Print the culture names with numbered options
+    for i, culture_name in enumerate(cultures.keys(), start=1):
+        print(f"{i}. {culture_name}")
+    choice = input("Enter your choice: ").upper()
+    if choice in cultures:
+        print(f"\n{cultures[choice]}\n")
+        learned_cultures.append(choice)
     else:
-        print("You have to choose a culture to learn about from the list below:")
-        for number, culture in enumerate(countries_culture):
-            print("{0}: {1}".format(number + 1, culture))
-    current_choice = input()
+        print("Invalid choice. Please enter a valid choice.")
+    new_choice = input("Do you want to learn about another culture? Enter 'y' for yes and 'n' for no: ")
+    while new_choice == 'y':
+        print("Select a culture to learn about:")
+        # Print the culture names with numbered options
+        for i, culture_name in enumerate(cultures.keys(), start=1):
+            print(f"{i}. {culture_name}")
+        new_choice_input = input("Enter your choice: ").upper()
+        if new_choice_input in cultures:
+            print()
+            print(cultures[new_choice_input])
+            print()
+            learned_cultures.append(new_choice_input)
+        else:
+            print("Invalid choice. Please enter a valid choice.")
+        new_choice = input("Do you want to learn about another culture? Enter 'y' for yes and 'n' for no: ")
+    print(f"You have learned about the following cultures: {learned_cultures}")
+    print()
 
-print("Thanks for exploring African culture with us! Rerun the program to start again.")
+def take_quiz(quiz_questions, learned_cultures):
+    while True:
+        print("Enter 'quiz' to take the quiz or 'exit' to end learning and take the quiz.")
+        quiz_choice = input("Enter your choice: ")
+
+        if quiz_choice == "quiz":
+            break
+        elif quiz_choice == "exit":
+            break
+
+    print("\nYou have learned about the following cultures:")
+    for culture in learned_cultures:
+        print(culture)
+
+    score = 0
+    total_questions = 0
+
+    if learned_cultures:
+        print("\nNow, let's test your knowledge with a quiz!")
+        for culture in learned_cultures:
+            if culture.upper() in quiz_questions:
+                total_questions += 1
+                print(quiz_questions[culture.upper()]["question"])
+                answer = input("Enter your answer: ")
+                if answer.lower() == quiz_questions[culture.upper()]["answer"].lower():
+                    print("Correct!\n")
+                    score += 1
+                else:
+                    print(f"Incorrect!\nThe correct answer is {quiz_questions[culture.upper()]['answer']}\n")
+        print(f"You scored {score} out of {total_questions} questions.")
+
+    else:
+        print("\nSince you did not learn about any culture, there is no quiz for you to take.")
+
+    print("\nThank you for learning and playing our African Culture Quiz Program!")
+
+def main():
+    cultures = {
+        "YORUBA": "Yoruba culture is one of the most vibrant cultures in Nigeria, known for its rich folklore, "
+                  "colorful festivals, and unique religious practices.",
+
+        "MAASAI": "The Maasai people of East Africa are known for their distinctive customs and dress, and for their"
+                  " close relationship with the natural world.",
+
+        "ZULU": "The Zulu people of South Africa have a rich history and cultural heritage, including a unique system "
+                "of government, art, music, and dance.",
+
+        "BERBER": "The Berber people of North Africa have a rich and ancient culture, known for their distinctive "
+                  "language, architecture, music, and traditional crafts.",
+
+        "KIKUYU": "The Kikuyu people are the largest ethnic group in Kenya and have a rich cultural heritage. "
+                  "They are known for their music, dance, and storytelling traditions.",
+
+        "SWAHILI": "The Swahili people are a diverse group found along the East African coast, including in Kenya, "
+                   "Tanzania, and Mozambique. They have a unique blend of African, Arab, and Indian influences and are "
+                   "known for their language, music, and cuisine.",
+
+        "TUAREG": "The Tuareg people are a nomadic group found in the Sahara Desert. They are known for their " 
+                  "distinctive blue clothing and jewelry, and have a rich tradition of music and poetry.",
+
+        "IGBO": "The Igbo people have a rich cultural heritage, including a unique religion, art, music, and dance. "
+                "They have a strong emphasis on community and are known for their entrepreneurial spirit.",
+
+        "AMHARA": "The Amhara people are one of the largest ethnic groups in Ethiopia and have a rich cultural "
+                  "heritage, including a unique language, music, and dance.",
+
+        "HAUSA": "The Hausa people are a large ethnic group found in Nigeria and Niger. They have a rich "
+                 "cultural heritage, including a unique language, music, and dance.",
+
+        "SAN": "The San people are one of the oldest ethnic groups in Southern Africa and have a unique "
+               "cultural heritage, including a distinctive language, art, music, and dance.",
+
+        "NDEBELE": "The Ndebele people of Zimbabwe and South Africa are known for their distinctive art and "
+                   "architecture, including brightly painted houses and bead-work.",
+
+        "WOLOF": "The Wolof people are one of the largest ethnic groups in Senegal and have a rich cultural heritage, "
+                 "including a unique language, music, and dance.",
+
+        "ASHANTI": "The Ashanti people of Ghana are known for their rich cultural traditions, including their use of "
+                   "kente cloth, traditional dance and music, and elaborate funerals to honor their ancestors.",
+
+        "FULA": "The Fula people are a large ethnic group found across West and Central Africa. "
+                "They have a rich cultural heritage, including a unique language, music, and dance.",
+
+    }
+
+    quiz_questions = {
+        "YORUBA": {"question": "What country is the Yoruba culture from?", "answer": "Nigeria"},
+
+        "MAASAI": {"question": "What animals are the Maasai people known for herding?", "answer": "Cattle"},
+
+        "ZULU": {"question": "What is the traditional weapon of the Zulu people?", "answer": "Spear"},
+
+        "BERBER": {"question": "What is the traditional music of the Berber people called?", "answer": "Amazigh"},
+
+        "KIKUYU": {"question": "What are the Kikuyu people known for in terms of culture?",
+                   "answer": "Music, dance, storytelling"},
+
+        "SWAHILI": {"question": "What makes the Swahili people's culture unique?",
+                    "answer": "Blend of African, Arab, and Indian influences"},
+
+        "TUAREG": {"question": "What is the distinctive clothing worn by the Tuareg people?",
+                   "answer": "Blue clothing and jewelry"},
+
+        "IGBO": {"question": "The Igbo people have a strong emphasis on what?", "answer": "Community"},
+
+        "AMHARA": {"question": "The Amhara people are one of the largest ethnic groups in?",
+                   "answer": "Ethiopia"},
+
+        "HAUSA": {"question": "Where are the two places where the Hausa people are found?",
+                  "answer": "Nigeria and Niger"},
+
+        "SAN": {"question": "The San people are one of the oldest ethnic groups in?", "answer": "Southern Africa"},
+
+        "NDEBELE": {"question": "What is the distinctive art form of the Ndebele people?",
+                    "answer": "Painted houses and bead-work"},
+
+        "WOLOF": {"question": "The Wolof people are in which country?",
+                  "answer": "Senegal"},
+
+        "ASHANTI": {"question": "What is the traditional cloth used by the Ashanti people?", "answer": "Kente cloth"},
+
+        "FULA": {"question": "What is the unique cultural heritage of the Fula people?",
+                 "answer": "Language, music, and dance"}
+    }
+
+    print("Welcome to the African Culture Learning and Quiz Program!")
+    learned_cultures = []
+    learn_about_cultures(cultures, learned_cultures)
+    take_quiz(quiz_questions, learned_cultures)
+
+main()
