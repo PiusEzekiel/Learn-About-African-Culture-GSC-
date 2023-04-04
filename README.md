@@ -1,4 +1,4 @@
-# Learn-About-African-Culture-PLD4
+# CulturePlay Learning and Quiz Program
 This program helps in learning about selected 15 African cultures. The user have the option to select from any of the listed ancient cultures.
 The program is run on a terminal 
 The program works by prompting you to enter the name of an African culture and it returns information about that culture.
