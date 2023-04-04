@@ -24,4 +24,4 @@ The CulturePlay Learning and Quiz Program includes the following features:
 4. User-friendly interface with clear instructions and prompts.
 
 
-## We hope you enjoy using the CulturePlay Learning and Quiz Program to learn about the diverse cultures of Africa to increase your knowledge! 
+# We hope you enjoy using the CulturePlay Learning and Quiz Program to learn about the diverse cultures of Africa to increase your knowledge! 
