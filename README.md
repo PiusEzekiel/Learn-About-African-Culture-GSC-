@@ -25,3 +25,4 @@ The CulturePlay Learning and Quiz Program includes the following features:
 
 
 # We hope you enjoy using the CulturePlay Learning and Quiz Program to learn about the diverse cultures of Africa to increase your knowledge! 
+# If you have any questions or feedback, please don't hesitate to contact us at o.ankeli@alustudent.com. Thank you for using the CulturePlay Learning and Quiz Program!
